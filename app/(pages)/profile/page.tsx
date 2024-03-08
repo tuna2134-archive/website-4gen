@@ -9,6 +9,29 @@ const skills = [
   "C++",
   "Linux",
   "Kubernetes",
+];
+
+const SNSAccounts = [
+  {
+    name: "X(Twitter)",
+    href: "https://twitter.com/fdc_tuna2134"
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/tuna2134"
+  },
+  {
+    name: "Bluesky",
+    href: "https://bsky.app/profile/tuna2134.dev"
+  },
+  {
+    name: "Misskey",
+    href: "https://misskey.io/@tuna2134"
+  },
+  {
+    name: "Discord",
+    href: "https://discord.com/users/739702692393517076"
+  }
 ]
 
 const Page: NextPage = () => {
@@ -28,6 +51,14 @@ const Page: NextPage = () => {
         <ul className="list-inside list-disc">
           {skills.map((skill, index) => (
             <li key={index}>{skill}</li>
+          ))}
+        </ul>
+      </Card>
+      <Card title="SNS" className="mt-4">
+        <p>僕が所持しているSNSアカウント</p>
+        <ul className="list-inside list-disc">
+          {SNSAccounts.map((account, index) => (
+            <li key={index}><a href={account.href}>{account.name}</a></li>
           ))}
         </ul>
       </Card>
