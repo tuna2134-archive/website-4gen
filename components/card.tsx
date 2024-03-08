@@ -1,9 +1,9 @@
 import clsx from "clsx";
 
 interface CardProps {
-  title: string
-  children: React.ReactNode
-  className: string
+  title: string;
+  children: React.ReactNode;
+  className: string;
 }
 
 const Card: React.FC<CardProps> = ({ title, children, className }) => {
@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({ title, children, className }) => {
       <h3 className="text-2xl font-bold">{title}</h3>
       <div className="mt-4">{children}</div>
     </div>
-  )
+  );
 };
 
 export default Card;

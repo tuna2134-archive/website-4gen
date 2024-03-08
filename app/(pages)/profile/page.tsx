@@ -14,25 +14,25 @@ const skills = [
 const SNSAccounts = [
   {
     name: "X(Twitter)",
-    href: "https://twitter.com/fdc_tuna2134"
+    href: "https://twitter.com/fdc_tuna2134",
   },
   {
     name: "GitHub",
-    href: "https://github.com/tuna2134"
+    href: "https://github.com/tuna2134",
   },
   {
     name: "Bluesky",
-    href: "https://bsky.app/profile/tuna2134.dev"
+    href: "https://bsky.app/profile/tuna2134.dev",
   },
   {
     name: "Misskey",
-    href: "https://misskey.io/@tuna2134"
+    href: "https://misskey.io/@tuna2134",
   },
   {
     name: "Discord",
-    href: "https://discord.com/users/739702692393517076"
-  }
-]
+    href: "https://discord.com/users/739702692393517076",
+  },
+];
 
 const Page: NextPage = () => {
   return (
@@ -40,10 +40,11 @@ const Page: NextPage = () => {
       <h2 className="text-2xl font-bold">tuna2134`s profile</h2>
       <Card className="mt-4" title="事故紹介">
         <p>
-          タイトルはふざけていますが、ほっといて<br />
+          タイトルはふざけていますが、ほっといて
+          <br />
           どうも、tuna2134です。中学1年生からプログラミングをしており、最初に始めた言語はPythonで
-          そこから、TypeScriptなどいろいろやっています。始めた最初の時はDiscord Botを作っていましたが、最近は
-          フロントエンドを中心にやっています。
+          そこから、TypeScriptなどいろいろやっています。始めた最初の時はDiscord
+          Botを作っていましたが、最近は フロントエンドを中心にやっています。
         </p>
       </Card>
       <Card title="スキル" className="mt-4">
@@ -59,13 +60,15 @@ const Page: NextPage = () => {
         <ul className="mt-2 list-inside list-disc">
           {SNSAccounts.map((account, index) => (
             <li key={index}>
-              <a className="hover:text-lime-500" href={account.href}>{account.name}</a>
+              <a className="hover:text-lime-500" href={account.href}>
+                {account.name}
+              </a>
             </li>
           ))}
         </ul>
       </Card>
     </>
-  )
-}
+  );
+};
 
 export default Page;
