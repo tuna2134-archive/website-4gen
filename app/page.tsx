@@ -10,7 +10,7 @@ export default function Home() {
       <div className="h-full items-center flex justify-center flex-col space-y-2">
         <Image src={AVATAR_URL} alt="tuna2134" width={120} height={120} className="rounded-full" />
         <h1 className="text-3xl font-bold text-center">tuna2134</h1>
-        <span>趣味に没頭する豚です</span>
+        <span>アニメなどの趣味に没頭する豚です</span>
         <Link href="/profile" className="bg-lime-700 py-2 px-6 rounded text-white">Go!!!</Link>
       </div>
     </main>
