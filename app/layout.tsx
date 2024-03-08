@@ -5,7 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "tuna2134",
+  title: {
+    template: "%s | tuna2134",
+    default: "Home",
+  },
   description: "tuna2134 is engineer and students",
 };
 
