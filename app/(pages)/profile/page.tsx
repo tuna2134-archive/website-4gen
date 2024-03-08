@@ -1,5 +1,5 @@
 import Card from "@/components/card";
-import { NextPage } from "next";
+import { NextPage, Metadata } from "next";
 
 const skills = [
   "Python",
@@ -33,6 +33,10 @@ const SNSAccounts = [
     href: "https://discord.com/users/739702692393517076",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Profile",
+};
 
 const Page: NextPage = () => {
   return (
