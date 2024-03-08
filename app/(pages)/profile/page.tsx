@@ -14,7 +14,7 @@ const skills = [
 const Page: NextPage = () => {
   return (
     <>
-      <h2 className="text-2xl font-bold">tuna2134's profile</h2>
+      <h2 className="text-2xl font-bold">tuna2134`s profile</h2>
       <Card className="mt-4" title="事故紹介">
         <p>
           タイトルはふざけていますが、ほっといて<br />
