@@ -48,7 +48,7 @@ const Page: NextPage = () => {
       </Card>
       <Card title="スキル" className="mt-4">
         <p>僕ができるプログラミング言語およびツールは以下の通りです。</p>
-        <ul className="list-inside list-disc">
+        <ul className="mt-2 list-inside list-disc">
           {skills.map((skill, index) => (
             <li key={index}>{skill}</li>
           ))}
@@ -56,9 +56,11 @@ const Page: NextPage = () => {
       </Card>
       <Card title="SNS" className="mt-4">
         <p>僕が所持しているSNSアカウント</p>
-        <ul className="list-inside list-disc">
+        <ul className="mt-2 list-inside list-disc">
           {SNSAccounts.map((account, index) => (
-            <li key={index}><a href={account.href}>{account.name}</a></li>
+            <li key={index}>
+              <a className="hover:text-lime-500" href={account.href}>{account.name}</a>
+            </li>
           ))}
         </ul>
       </Card>

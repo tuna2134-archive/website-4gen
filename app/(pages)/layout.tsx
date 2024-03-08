@@ -8,7 +8,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="max-w-4xl mx-auto w-full pt-4">{children}</main>
+      <main className="max-w-4xl mx-auto w-full py-4">{children}</main>
     </>
   )
 }
