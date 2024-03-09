@@ -59,7 +59,7 @@ const Page: NextPage = () => {
           <br />
           どうも、tuna2134です。中学1年生からプログラミングをしており、最初に始めた言語はPythonで
           そこから、TypeScriptなどいろいろやっています。始めた最初の時はDiscord
-          Botを作っていましたが、最近は フロントエンドを中心にやっています。
+          Botを作っていましたが、最近はフロントエンドを中心にやっています。
         </p>
       </Card>
       <Card title="スキル" className="mt-4">
