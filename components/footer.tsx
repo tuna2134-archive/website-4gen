@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-6">
           <p className="text-center text-slate-400">
-            &copy; 2021 tuna2134
+            &copy; 2024 tuna2134
           </p>
         </div>
       </div>
