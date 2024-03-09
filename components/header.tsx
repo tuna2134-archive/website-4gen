@@ -9,6 +9,10 @@ export const links = [
     name: "Articles",
     path: "/articles",
   },
+  {
+    name: "Docs",
+    path: "https://docs.tuna2134.dev",
+  },
 ];
 
 const Header: React.FC = () => {
