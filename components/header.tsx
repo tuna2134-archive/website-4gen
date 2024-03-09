@@ -7,8 +7,8 @@ export const links = [
   },
   {
     name: "Articles",
-    path: "/articles"
-  }
+    path: "/articles",
+  },
 ];
 
 const Header: React.FC = () => {

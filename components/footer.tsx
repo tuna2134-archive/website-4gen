@@ -18,7 +18,7 @@ const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
         ))}
       </ul>
     </div>
-  )
+  );
 };
 
 const socialLinks = [
@@ -33,8 +33,8 @@ const socialLinks = [
   {
     name: "Misskey",
     path: "https://misskey.io/@tuna2134",
-  }
-]
+  },
+];
 
 const Footer: React.FC = () => {
   return (
@@ -45,13 +45,11 @@ const Footer: React.FC = () => {
           <FooterLinkGroup title="Links" links={headerLinks} />
         </div>
         <div className="mt-6">
-          <p className="text-center text-slate-400">
-            &copy; 2024 tuna2134
-          </p>
+          <p className="text-center text-slate-400">&copy; 2024 tuna2134</p>
         </div>
       </div>
     </footer>
-  )
+  );
 };
 
 export default Footer;
