@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-4xl mx-auto py-10 px-4">
-        <div className="flex space-x-20 justify-center">
+        <div className="flex space-x-20 justify-center md:justify-start">
           <FooterLinkGroup title="Social" links={socialLinks} />
           <FooterLinkGroup title="Links" links={headerLinks} />
         </div>
