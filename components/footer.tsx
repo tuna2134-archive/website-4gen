@@ -9,8 +9,8 @@ interface FooterLinkGroupProps {
 const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
   return (
     <div>
-      <p className="text-lg font-bold">{title}</p>
-      <ul className="text-sm text-slate-400">
+      <p className="text-lg font-bold mb-1.5">{title}</p>
+      <ul className="text-sm text-slate-400 space-y-0.5">
         {links.map((link, index) => (
           <li key={index}>
             <Link href={link.path}>{link.name}</Link>
