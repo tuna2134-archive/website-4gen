@@ -40,9 +40,14 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-4xl mx-auto py-10 px-4">
-        <div className="flex space-x-20 justify-center md:justify-start">
-          <FooterLinkGroup title="Social" links={socialLinks} />
-          <FooterLinkGroup title="Links" links={headerLinks} />
+        <div className="flex flex-col md:flex-row">
+          <div className="flex space-x-20 justify-center md:justify-start">
+            <FooterLinkGroup title="Social" links={socialLinks} />
+            <FooterLinkGroup title="Links" links={headerLinks} />
+          </div>
+          <div className="mt-6 ml-none md:ml-auto h-auto flex items-center justify-center">
+            <p>Powered by CloudFlare Pages</p>
+          </div>
         </div>
         <div className="mt-6">
           <p className="text-center text-slate-400">&copy; 2024 tuna2134</p>
