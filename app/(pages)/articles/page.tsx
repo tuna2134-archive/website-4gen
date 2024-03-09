@@ -14,7 +14,7 @@ const Page: NextPage = async () => {
   return (
     <>
       <h2 className="text-2xl font-bold">Articles</h2>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {feed.items.map((item, index) => (
           <div key={index} className="mt-4">
             <Link href={item.link as string}>
