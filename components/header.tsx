@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const links = [
+export const links = [
   {
     name: "Profile",
     path: "/profile",
@@ -10,7 +10,7 @@ const links = [
 const Header: React.FC = () => {
   return (
     <header className="h-14 border-b">
-      <div className="w-full h-full flex justify-center items-center max-w-4xl mx-auto">
+      <div className="w-full h-full flex justify-center items-center max-w-4xl mx-auto p-4">
         <Link href="/">
           <h1 className="text-2xl font-bold">tuna2134</h1>
         </Link>
