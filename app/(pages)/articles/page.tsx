@@ -20,7 +20,7 @@ const Page: NextPage = async () => {
             <Link href={item.link as string}>
               <h3 className="text-xl font-bold hover:text-lime-600">{`${item.title?.substring(0, 15)}...`}</h3>
             </Link>
-            <Image src={item.enclosure?.url as string} alt={item.title as string} className="mt-2 w-full" />
+            <Image width={1200} height={630} src={item.enclosure?.url as string} alt={item.title as string} className="mt-2 w-full" />
           </div>
         ))}
       </div>
