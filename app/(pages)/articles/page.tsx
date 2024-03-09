@@ -1,8 +1,12 @@
-import { NextPage } from "next";
+import { Metadata, NextPage } from "next";
 import Parser from "rss-parser";
 import Link from "next/link";
 
 const parser = new Parser();
+
+export const metadata: Metadata = {
+  title: "Articles",
+};
 
 const Page: NextPage = async () => {
   const feed = await parser.parseURL("https://zenn.dev/dms_sub/feed");
