@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier -w ./**/*.{ts,tsx,js,json}"
+    "format": "prettier -w ./**/*.{ts,tsx,js,json,mjs}"
   },
   "dependencies": {
     "clsx": "^2.1.0",

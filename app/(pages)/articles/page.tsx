@@ -1,6 +1,7 @@
 import { Metadata, NextPage } from "next";
 import Parser from "rss-parser";
 import Link from "next/link";
+import Image from "next/image";
 
 const parser = new Parser();
 
@@ -19,7 +20,7 @@ const Page: NextPage = async () => {
             <Link href={item.link as string}>
               <h3 className="text-xl font-bold hover:text-lime-600">{`${item.title?.substring(0, 15)}...`}</h3>
             </Link>
-            <img src={item.enclosure?.url} alt={item.title} className="mt-2 w-full" />
+            <Image src={item.enclosure?.url as string} alt={item.title as string} className="mt-2 w-full" />
           </div>
         ))}
       </div>
