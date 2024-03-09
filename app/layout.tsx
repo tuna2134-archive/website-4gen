@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | tuna2134",
     default: "Home",
   },
-  description: "tuna2134 is engineer and students",
+  description: "tuna2134 is an engineer and student",
 };
 
 export default function RootLayout({
