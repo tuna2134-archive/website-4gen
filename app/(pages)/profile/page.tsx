@@ -34,6 +34,17 @@ const SNSAccounts = [
   },
 ];
 
+const organizations = [
+  {
+    name: "neodyland",
+    href: "https://neody.land",
+  },
+  {
+    name: "KuronekoServer",
+    href: "https://kuroneko6423.com/",
+  }
+];
+
 export const metadata: Metadata = {
   title: "Profile",
 };
@@ -56,6 +67,18 @@ const Page: NextPage = () => {
         <ul className="mt-2 list-inside list-disc">
           {skills.map((skill, index) => (
             <li key={index}>{skill}</li>
+          ))}
+        </ul>
+      </Card>
+      <Card title="所属組織" className="mt-4">
+        <p>僕が所属している組織</p>
+        <ul className="mt-2 list-inside list-disc">
+          {organizations.map((organization, index) => (
+            <li key={index}>
+              <a className="hover:text-lime-500" href={organization.href}>
+                {organization.name}
+              </a>
+            </li>
           ))}
         </ul>
       </Card>

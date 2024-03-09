@@ -34,6 +34,10 @@ const socialLinks = [
     name: "Misskey",
     path: "https://misskey.io/@tuna2134",
   },
+  {
+    name: "Bluesky",
+    path: "https://bsky.app/profile/tuna2134.dev",
+  }
 ];
 
 const Footer: React.FC = () => {
