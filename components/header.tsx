@@ -5,6 +5,10 @@ export const links = [
     name: "Profile",
     path: "/profile",
   },
+  {
+    name: "Articles",
+    path: "/articles"
+  }
 ];
 
 const Header: React.FC = () => {
