@@ -9,7 +9,7 @@ interface FooterLinkGroupProps {
 const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
   return (
     <div>
-      <p className="text-lg">{title}</p>
+      <p className="text-lg font-bold">{title}</p>
       <ul className="text-sm text-slate-400">
         {links.map((link, index) => (
           <li key={index}>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
           <FooterLinkGroup title="Social" links={socialLinks} />
           <FooterLinkGroup title="Links" links={headerLinks} />
         </div>
-        <div className="mt-4">
+        <div className="mt-6">
           <p className="text-center text-slate-400">
             &copy; 2021 tuna2134
           </p>
