@@ -15,7 +15,7 @@ export const HumburgerMenu: React.FC<HumburgerMenuProps> = ({
   return (
     <button className={clsx("space-y-2", className)} {...props}>
       {[...Array(3)].map((_, index) => (
-        <div key={index} className="h-0.5 w-8 rounded bg-black" />
+        <div key={index} className="h-0.5 w-8 rounded bg-black dark-bg-white" />
       ))}
     </button>
   );
