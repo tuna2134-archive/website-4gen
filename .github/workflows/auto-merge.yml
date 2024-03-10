@@ -10,7 +10,6 @@ permissions:
 jobs:
   renovatebot:
     runs-on: ubuntu-latest
-    if: github.actor == 'renovate[bot]'
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
