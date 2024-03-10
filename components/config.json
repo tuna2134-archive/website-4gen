@@ -1,0 +1,60 @@
+{
+  "headers": {
+    "navigationLink": [
+      {
+        "name": "Profile",
+        "path": "/profile"
+      },
+      {
+        "name": "Articles",
+        "path": "/articles"
+      },
+      {
+        "name": "Works",
+        "path": "/works"
+      }
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "name": "Profile",
+        "href": "/profile"
+      },
+      {
+        "name": "Articles",
+        "href": "/articles"
+      },
+      {
+        "name": "Works",
+        "href": "/works"
+      },
+      {
+        "name": "Docs",
+        "href": "https://docs.tuna2134.dev"
+      }
+    ],
+    "socialLinks": [
+      {
+        "name": "X(Twitter)",
+        "href": "https://twitter.com/fdc_tuna2134"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/tuna2134"
+      },
+      {
+        "name": "Misskey",
+        "href": "https://misskey.io/@tuna2134"
+      },
+      {
+        "name": "Bluesky",
+        "href": "https://bsky.app/profile/tuna2134.dev"
+      },
+      {
+        "name": "Discord",
+        "href": "https://discord.com/users/739702692393517076"
+      }
+    ]
+  }
+}

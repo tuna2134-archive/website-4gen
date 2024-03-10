@@ -1,19 +1,5 @@
 import Link from "next/link";
-
-export const links = [
-  {
-    name: "Profile",
-    path: "/profile",
-  },
-  {
-    name: "Articles",
-    path: "/articles",
-  },
-  {
-    name: "Docs",
-    path: "https://docs.tuna2134.dev",
-  },
-];
+import config from "./config.json";
 
 const Header: React.FC = () => {
   return (
@@ -23,7 +9,7 @@ const Header: React.FC = () => {
           <h1 className="text-2xl font-bold">tuna2134</h1>
         </Link>
         <div className="space-x-4">
-          {links.map((link, index) => (
+          {config.headers.navigationLink.map((link, index) => (
             <Link href={link.path} key={index}>
               {link.name}
             </Link>

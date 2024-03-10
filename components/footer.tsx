@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { links as headerLinks } from "./header";
+import config from "./config.json";
 import Image from "next/image";
 
 interface FooterLinkGroupProps {
   title: string;
-  links: { name: string; path: string }[];
+  links: { name: string; href: string }[];
 }
 
 const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
@@ -14,7 +14,7 @@ const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
       <ul className="space-y-0.5 text-sm text-slate-400">
         {links.map((link, index) => (
           <li key={index}>
-            <Link href={link.path}>{link.name}</Link>
+            <Link href={link.href}>{link.name}</Link>
           </li>
         ))}
       </ul>
@@ -22,33 +22,14 @@ const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
   );
 };
 
-const socialLinks = [
-  {
-    name: "X(Twitter)",
-    path: "https://twitter.com/fdc_tuna2134",
-  },
-  {
-    name: "GitHub",
-    path: "https://github.com/tuna2134",
-  },
-  {
-    name: "Misskey",
-    path: "https://misskey.io/@tuna2134",
-  },
-  {
-    name: "Bluesky",
-    path: "https://bsky.app/profile/tuna2134.dev",
-  },
-];
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="mx-auto max-w-4xl px-4 py-10">
         <div className="flex flex-col md:flex-row">
           <div className="flex justify-center space-x-20 md:justify-start">
-            <FooterLinkGroup title="Social" links={socialLinks} />
-            <FooterLinkGroup title="Links" links={headerLinks} />
+            <FooterLinkGroup title="Social" links={config.footer.socialLinks} />
+            <FooterLinkGroup title="Links" links={config.footer.links} />
           </div>
           <div className="ml-none flex h-auto items-center justify-center md:ml-auto">
             <div>
