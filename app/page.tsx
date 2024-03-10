@@ -17,10 +17,7 @@ export default function Home() {
         />
         <h1 className="text-center text-3xl font-bold">tuna2134</h1>
         <span>アニメなどの趣味に没頭する豚です</span>
-        <Link
-          href="/profile"
-          className="rounded bg-lime-700 px-6 py-2 text-white"
-        >
+        <Link href="/home" className="rounded bg-lime-700 px-6 py-2 text-white">
           Go!!!
         </Link>
       </div>

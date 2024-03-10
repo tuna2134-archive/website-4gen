@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="h-14 border-b">
       <div className="mx-auto flex h-full w-full max-w-4xl items-center justify-between p-4">
-        <Link href="/">
+        <Link href="/home">
           <h1 className="text-2xl font-bold">tuna2134</h1>
         </Link>
         <div className="space-x-4">

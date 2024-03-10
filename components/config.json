@@ -2,25 +2,21 @@
   "headers": {
     "navigationLink": [
       {
-        "name": "Profile",
-        "path": "/profile"
-      },
-      {
         "name": "Articles",
         "path": "/articles"
       },
       {
         "name": "Works",
         "path": "/works"
+      },
+      {
+        "name": "Profile",
+        "path": "/home"
       }
     ]
   },
   "footer": {
     "links": [
-      {
-        "name": "Profile",
-        "href": "/profile"
-      },
       {
         "name": "Articles",
         "href": "/articles"
