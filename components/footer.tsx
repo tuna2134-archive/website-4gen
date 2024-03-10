@@ -10,8 +10,8 @@ interface FooterLinkGroupProps {
 const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
   return (
     <div>
-      <p className="text-lg font-bold mb-1.5">{title}</p>
-      <ul className="text-sm text-slate-400 space-y-0.5">
+      <p className="mb-1.5 text-lg font-bold">{title}</p>
+      <ul className="space-y-0.5 text-sm text-slate-400">
         {links.map((link, index) => (
           <li key={index}>
             <Link href={link.path}>{link.name}</Link>
@@ -38,21 +38,26 @@ const socialLinks = [
   {
     name: "Bluesky",
     path: "https://bsky.app/profile/tuna2134.dev",
-  }
+  },
 ];
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-4xl mx-auto py-10 px-4">
+      <div className="mx-auto max-w-4xl px-4 py-10">
         <div className="flex flex-col md:flex-row">
-          <div className="flex space-x-20 justify-center md:justify-start">
+          <div className="flex justify-center space-x-20 md:justify-start">
             <FooterLinkGroup title="Social" links={socialLinks} />
             <FooterLinkGroup title="Links" links={headerLinks} />
           </div>
-          <div className="ml-none md:ml-auto h-auto flex items-center justify-center">
+          <div className="ml-none flex h-auto items-center justify-center md:ml-auto">
             <div>
-              <Image width={173} height={24} src="./cloudflare-logo.svg" alt="CloudFlare Logo" />
+              <Image
+                width={173}
+                height={24}
+                src="./cloudflare-logo.svg"
+                alt="CloudFlare Logo"
+              />
               <p className="mt-1.5">Powered by CloudFlare Pages</p>
             </div>
           </div>
