@@ -1,5 +1,5 @@
 import Link from "next/link";
-import config from "./config.json";
+import config from "../config.json";
 
 const Header: React.FC = () => {
   return (

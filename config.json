@@ -1,0 +1,100 @@
+{
+  "headers": {
+    "navigationLink": [
+      {
+        "name": "Articles",
+        "path": "/articles"
+      },
+      {
+        "name": "Works",
+        "path": "/works"
+      },
+      {
+        "name": "Profile",
+        "path": "/home"
+      }
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "name": "Articles",
+        "href": "/articles"
+      },
+      {
+        "name": "Works",
+        "href": "/works"
+      },
+      {
+        "name": "Docs",
+        "href": "https://docs.tuna2134.dev"
+      }
+    ],
+    "socialLinks": [
+      {
+        "name": "X(Twitter)",
+        "href": "https://twitter.com/fdc_tuna2134"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/tuna2134"
+      },
+      {
+        "name": "Misskey",
+        "href": "https://misskey.io/@tuna2134"
+      },
+      {
+        "name": "Bluesky",
+        "href": "https://bsky.app/profile/tuna2134.dev"
+      },
+      {
+        "name": "Discord",
+        "href": "https://discord.com/users/739702692393517076"
+      }
+    ]
+  },
+  "pages": {
+    "works": [
+      {
+        "title": "voicevox-client",
+        "description": "VOICEVOX-ENGINEのAPIラッパー",
+        "link": "https://github.com/voicevox-client/python"
+      },
+      {
+        "title": "google-custom-search",
+        "description": "google custom search apiのpython非公式ラッパー",
+        "link": "https://github.com/mc-fdc-dev/google-custom-search"
+      },
+      {
+        "title": "homepage",
+        "description": "このホームページです",
+        "link": "https://tuna2134.jp"
+      },
+      {
+        "title": "globalchat-rs",
+        "description": "Rustのtwilightで作ったグローバルチャット",
+        "link": "https://github.com/tuna2134/globalchat-rs"
+      },
+      {
+        "title": "webshot-api",
+        "description": "chromiumを使ってサイトのスクショをします。",
+        "link": "https://docs.tuna2134.dev/api/webshot/"
+      },
+      {
+        "title": "chromium-docker",
+        "description": "chromiumのdockerイメージ",
+        "link": "https://github.com/tuna2134/chromium-docker"
+      },
+      {
+        "title": "清夏",
+        "description": "Discord Message関係bot",
+        "link": "https://sayaka.tuna2134.dev/"
+      },
+      {
+        "title": "Glow-bot",
+        "description": "neodyで作っている多機能bot",
+        "link": "https://glow-bot.com/"
+      }
+    ]
+  }
+}

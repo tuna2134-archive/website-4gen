@@ -3,7 +3,7 @@ import clsx from "clsx";
 interface CardProps {
   title: string;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const Card: React.FC<CardProps> = ({ title, children, className }) => {
