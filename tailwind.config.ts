@@ -8,10 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        "fade-in-right":
+          "fade-in-right 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+      },
+      keyframes: {
+        "fade-in-right": {
+          "0%": {
+            transform: "translateX(50px)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
       },
     },
   },
