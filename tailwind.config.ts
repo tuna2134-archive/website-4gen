@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       animation: {
         "fade-in-right":
-          "fade-in-right 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+          "fade-in-right 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
       },
       keyframes: {
         "fade-in-right": {
