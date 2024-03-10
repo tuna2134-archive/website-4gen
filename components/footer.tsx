@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 src="./cloudflare-logo.svg"
                 alt="CloudFlare Logo"
               />
-              <p className="mt-1.5">Powered by CloudFlare Pages</p>
+              <p className="mt-1.5 text-slate-400">Powered by CloudFlare Pages</p>
             </div>
           </div>
         </div>
