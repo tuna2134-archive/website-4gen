@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             <FooterLinkGroup title="Social" links={config.footer.socialLinks} />
             <FooterLinkGroup title="Links" links={config.footer.links} />
           </div>
-          <div className="ml-none mt-4 flex h-auto items-center justify-center md:ml-auto">
+          <div className="ml-none mt-6 flex h-auto items-center justify-center md:ml-auto">
             <div>
               <Image
                 width={173}
