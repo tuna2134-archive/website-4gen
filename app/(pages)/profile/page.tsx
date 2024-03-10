@@ -42,7 +42,7 @@ const organizations = [
   {
     name: "KuronekoServer",
     href: "https://kuroneko6423.com/",
-  }
+  },
 ];
 
 export const metadata: Metadata = {
