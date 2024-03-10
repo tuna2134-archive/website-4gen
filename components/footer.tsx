@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { links as headerLinks } from "./header";
+import Image from "next/image";
 
 interface FooterLinkGroupProps {
   title: string;
@@ -49,8 +50,11 @@ const Footer: React.FC = () => {
             <FooterLinkGroup title="Social" links={socialLinks} />
             <FooterLinkGroup title="Links" links={headerLinks} />
           </div>
-          <div className="mt-6 ml-none md:ml-auto h-auto flex items-center justify-center">
-            <p>Powered by CloudFlare Pages</p>
+          <div className="ml-none md:ml-auto h-auto flex items-center justify-center">
+            <div>
+              <Image width={173} height={24} src="./cloudflare-logo.svg" alt="CloudFlare Logo" />
+              <p className="mt-1.5">Powered by CloudFlare Pages</p>
+            </div>
           </div>
         </div>
         <div className="mt-6">
