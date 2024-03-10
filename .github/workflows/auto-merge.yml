@@ -1,4 +1,4 @@
-name: Dependabot auto-merge
+name: Renovatebot auto-merge
 
 on:
   pull_request:
