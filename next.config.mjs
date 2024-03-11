@@ -14,4 +14,8 @@ const nextConfig = {
   },
 };
 
+if (process.env.NEXT_OUTPUT === "standalone") {
+  nextConfig.output = "standalone";
+};
+
 export default nextConfig;
