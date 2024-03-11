@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_JP, Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const popins = Poppins({ subsets: ["latin"], weight: "400" });
+const notoSansJP = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={`${popins.className} ${notoSansJP.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
