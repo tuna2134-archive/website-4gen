@@ -9,7 +9,12 @@ COPY pnpm-lock.yaml package.json ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN --mount=type=cache,target=/src/.next pnpm build
+RUN --mount=type=cache,target=/src/.next pnpm build && \
+    cp -r /src/.next /tmp/.next
+
+WORKDIR /tmp/.next/standalone
+
+RUN pnpm add sharp
 
 FROM gcr.io/distroless/nodejs20-debian12
 
@@ -17,8 +22,8 @@ ENV NODE_ENV production
 WORKDIR /usr/src
 
 COPY --chown=nonroot:nonroot ./public ./public
-COPY --from=builder --chown=nonroot:nonroot /src/.next/standalone ./
-COPY --from=builder --chown=nonroot:nonroot /src/.next/static ./.next/static
+COPY --from=builder --chown=nonroot:nonroot /tmp/.next/standalone ./
+COPY --from=builder --chown=nonroot:nonroot /tmp/.next/static ./.next/static
 
 USER nonroot
 EXPOSE 3000
