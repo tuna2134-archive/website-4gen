@@ -5,11 +5,11 @@ WORKDIR /src
 ENV NEXT_OUTPUT standalone
 RUN corepack enable
 
-COPY pnpm-lock.yaml package.json .
+COPY pnpm-lock.yaml package.json ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN pnpm build
+RUN --mount=type=cache,target=/src/.next pnpm build
 
 FROM gcr.io/distroless/nodejs20-debian12
 
