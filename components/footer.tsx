@@ -33,12 +33,14 @@ const Footer: React.FC = () => {
           </div>
           <div className="ml-none mt-6 flex h-auto items-center justify-center md:ml-auto">
             <div>
-              <Image
-                width={173}
-                height={24}
-                src="./cloudflare-logo.svg"
-                alt="CloudFlare Logo"
-              />
+              <div className="flex justify-center">
+                <Image
+                  width={173}
+                  height={24}
+                  src="./cloudflare-logo.svg"
+                  alt="CloudFlare Logo"
+                />
+              </div>
               <p className="mt-1.5 text-slate-400">
                 Powered by CloudFlare Pages
               </p>
