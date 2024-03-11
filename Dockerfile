@@ -15,7 +15,7 @@ RUN --mount=type=cache,target=/src/.next pnpm build && \
 WORKDIR /tmp/.next/standalone
 ENV NODE_ENV production
 
-RUN pnpm add sharp
+RUN pnpm install sharp
 
 FROM gcr.io/distroless/nodejs20-debian12
 
