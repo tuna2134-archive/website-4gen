@@ -7,7 +7,7 @@ const statusColor = tv({
     status: {
       online: "bg-green-500",
       offline: "bg-gray-400",
-      idle: "bg-orange-500",
+      idle: "bg-orange-400",
     },
   },
 });
