@@ -15,7 +15,7 @@ type statusColorProps = VariantProps<typeof statusColor>;
 
 interface AvatarProps extends statusColorProps {
   src: string;
-};
+}
 
 const Avatar: React.FC<AvatarProps> = ({ status, src }) => {
   const statusColorVariants = statusColor({ status });
