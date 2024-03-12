@@ -7,6 +7,7 @@ const statusColor = tv({
     status: {
       online: "bg-green-500",
       offline: "bg-gray-400",
+      idle: "bg-orange-500",
     },
   },
 });
@@ -17,7 +18,7 @@ interface AvatarProps extends statusColorProps {
   src: string;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ status, src }) => {
+export const Avatar: React.FC<AvatarProps> = ({ status, src }) => {
   const statusColorVariants = statusColor({ status });
   return (
     <div className="relative">
@@ -32,5 +33,3 @@ const Avatar: React.FC<AvatarProps> = ({ status, src }) => {
     </div>
   );
 };
-
-export default Avatar;
