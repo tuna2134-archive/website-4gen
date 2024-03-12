@@ -1,10 +1,5 @@
 import Image from "next/image";
-import { tv } from "tailwind-variants";
-
-interface AvatarProps {
-  status: "online" | "offline";
-  src: string;
-}
+import { type VariantProps, tv } from "tailwind-variants";
 
 const statusColor = tv({
   base: "w-8 h-8 rounded-full absolute bottom-0 right-0 border border-2",
@@ -15,6 +10,12 @@ const statusColor = tv({
     },
   },
 });
+
+type statusColorProps = VariantProps<typeof statusColor>;
+
+interface AvatarProps extends statusColorProps {
+  src: string;
+};
 
 const Avatar: React.FC<AvatarProps> = ({ status, src }) => {
   const statusColorVariants = statusColor({ status });

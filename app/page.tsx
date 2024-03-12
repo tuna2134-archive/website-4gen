@@ -8,7 +8,7 @@ const AVATAR_URL: string =
   "https://cdn.discordapp.com/avatars/739702692393517076/b9fddaa026c1002e8c7d4d8f22978e43.png?size=1024";
 
 interface UserStatus {
-  status: "online" | "offline";
+  status: "online" | "offline" | undefined;
 }
 
 export default function Home() {
