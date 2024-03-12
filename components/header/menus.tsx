@@ -15,7 +15,7 @@ export const HumburgerMenu: React.FC<HumburgerMenuProps> = ({
   return (
     <button className={clsx("space-y-2", className)} {...props}>
       {[...Array(3)].map((_, index) => (
-        <div key={index} className="h-0.5 w-8 rounded bg-black dark-bg-white" />
+        <div key={index} className="dark-bg-white h-0.5 w-8 rounded bg-black" />
       ))}
     </button>
   );
@@ -33,8 +33,8 @@ export const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({
     <div
       className={clsx(
         `
-          animate-fade-in-right fixed left-0 top-0 flex min-h-screen
-          w-full justify-between bg-white p-6
+          fixed left-0 top-0 flex min-h-screen w-full
+          animate-fade-in-right justify-between bg-white p-6
           `,
         !isShow && "hidden",
       )}
