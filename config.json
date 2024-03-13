@@ -98,6 +98,16 @@
         "title": "Glow-bot",
         "description": "neodyで作っている多機能bot",
         "link": "https://glow-bot.com/"
+      },
+      {
+        "title": "expander",
+        "description": "メッセージURL展開bot",
+        "link": "https://github.com/mc-fdc-dev/expander"
+      },
+      {
+        "title": "minecraft-be-image",
+        "description": "マイクラ統合版向けdockerイメージ",
+        "link": "https://github.com/mc-fdc-dev/minecraft-be-image"
       }
     ]
   }
