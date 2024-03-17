@@ -109,6 +109,20 @@
         "description": "マイクラ統合版向けdockerイメージ",
         "link": "https://github.com/mc-fdc-dev/minecraft-be-image"
       }
+    ],
+    "contacts": [
+      {
+        "name": "Discord",
+        "href": "https://discord.com/users/739702692393517076",
+        "hrefTitle": "bocchi_the_develop",
+        "image": "/discord-mark-blue.svg"
+      },
+      {
+        "name": "Mail",
+        "href": "mailto:contact@tuna2134.dev",
+        "hrefTitle": "contact⭐tuna2134.dev",
+        "image": "/mail.svg"
+      }
     ]
   }
 }
