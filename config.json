@@ -32,6 +32,10 @@
       {
         "name": "Profile",
         "href": "/home"
+      },
+      {
+        "name": "Contact",
+        "href": "/contact"
       }
     ],
     "socialLinks": [
