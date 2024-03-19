@@ -52,3 +52,5 @@ const Page = async ({ searchParams }: {
 };
 
 export default Page;
+
+export const runtime = "edge";
