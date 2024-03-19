@@ -1,4 +1,4 @@
-import { Metadata, NextPage } from "next";
+import { Metadata } from "next";
 import Parser from "rss-parser";
 import Link from "next/link";
 import Image from "next/image";
