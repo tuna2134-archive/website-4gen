@@ -11,6 +11,7 @@ const parser = new XMLParser({
 
 export const metadata: Metadata = {
   title: "Articles",
+  description: "記事一覧です。",
 };
 
 interface RssItem {
