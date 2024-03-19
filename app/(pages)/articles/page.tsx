@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import twoDimArray from "@/libs/twoDimArray";
 import { XMLParser } from "fast-xml-parser";
+import { SwitchButton } from "@/components/pages/articles";
 
 const parser = new XMLParser({
   ignoreAttributes: false,
@@ -10,20 +11,6 @@ const parser = new XMLParser({
 
 export const metadata: Metadata = {
   title: "Articles",
-};
-
-const SwitchButton: React.FC<{ page: number; name: string }> = ({
-  page,
-  name,
-}) => {
-  return (
-    <Link
-      href={`/articles?page=${page}`}
-      className="rounded px-3 py-1 hover:bg-lime-100"
-    >
-      {name}
-    </Link>
-  );
 };
 
 interface RssItem {
