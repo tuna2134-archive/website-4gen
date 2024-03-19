@@ -20,8 +20,8 @@ const sitemaps = [
   {
     path: "/contact",
     priority: 0.3,
-  }
-]
+  },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return sitemaps.map((sitemap) => ({
@@ -30,4 +30,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     priority: sitemap.priority,
   }));
-};
+}

@@ -11,7 +11,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, children, className, iconURL }) => {
   return (
     <div className={clsx("rounded-md bg-white p-4 shadow-md", className)}>
-      <div className="flex space-x-2 items-center">
+      <div className="flex items-center space-x-2">
         {iconURL && (
           <Image src={iconURL as string} alt={title} width={32} height={32} />
         )}

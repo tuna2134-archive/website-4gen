@@ -1,28 +1,48 @@
 import { Metadata } from "next";
-import Parser from "rss-parser";
 import Link from "next/link";
 import Image from "next/image";
 import twoDimArray from "@/libs/twoDimArray";
+import { XMLParser } from "fast-xml-parser";
 
-const parser = new Parser();
+const parser = new XMLParser({
+  ignoreAttributes: false,
+});
 
 export const metadata: Metadata = {
   title: "Articles",
 };
 
-const SwitchButton: React.FC<{ page: number, name: string }> = ({ page, name }) => {
+const SwitchButton: React.FC<{ page: number; name: string }> = ({
+  page,
+  name,
+}) => {
   return (
-    <Link href={`/articles?page=${page}`} className="hover:bg-lime-100 rounded px-3 py-1">
+    <Link
+      href={`/articles?page=${page}`}
+      className="rounded px-3 py-1 hover:bg-lime-100"
+    >
       {name}
     </Link>
   );
+};
+
+interface RssItem {
+  title?: string;
+  link?: string;
+  enclosure: {
+    "@_url": string;
+  };
 }
 
-const Page = async ({ searchParams }: {
-  searchParams: { [key: string]: string | string[] | undefined }
+const Page = async ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
 }) => {
-  const feed = await parser.parseURL("https://zenn.dev/dms_sub/feed");
-  const items = twoDimArray({ data: feed.items, size: 6 });
+  const data = parser.parse(
+    await (await fetch("https://zenn.dev/dms_sub/feed")).text(),
+  );
+  const items = twoDimArray<RssItem>({ data: data.rss.channel.item, size: 6 });
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
   return (
     <>
@@ -36,7 +56,7 @@ const Page = async ({ searchParams }: {
             <Image
               width={1200}
               height={630}
-              src={item.enclosure?.url as string}
+              src={item.enclosure["@_url"] as string}
               alt={item.title as string}
               className="mt-2 w-full"
             />
