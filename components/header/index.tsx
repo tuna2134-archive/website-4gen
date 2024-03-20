@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   };
   return (
     <header className="h-14 border-b">
-      <div className="mx-auto flex h-full w-full max-w-6xl items-center justify-between p-6">
+      <div className="mx-auto flex h-full w-full max-w-4xl xl:max-w-6xl items-center justify-between p-6">
         <HumburgerMenu className="absolute md:hidden" onClick={handleClick} />
         <ResponsiveMenu isShow={isShow} onClick={handleClick} />
         <Link
