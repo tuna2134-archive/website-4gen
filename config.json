@@ -112,6 +112,11 @@
         "title": "minecraft-be-image",
         "description": "マイクラ統合版向けdockerイメージ",
         "link": "https://github.com/mc-fdc-dev/minecraft-be-image"
+      },
+      {
+        "title": "Automod CAP",
+        "description": "Automodをコピペしてくれるbot",
+        "link": "https://discord.com/oauth2/authorize?client_id=1002877676526239794&permissions=68640&scope=bot"
       }
     ],
     "contacts": [
