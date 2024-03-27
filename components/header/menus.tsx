@@ -34,7 +34,7 @@ export const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({
       className={clsx(
         `
           fixed left-0 top-0 flex w-full
-          animate-fade-in-right justify-between bg-white p-8
+          animate-fade-in-top justify-between bg-white p-8
           `,
         !isShow && "hidden",
       )}
