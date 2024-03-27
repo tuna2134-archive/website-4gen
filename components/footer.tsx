@@ -25,7 +25,7 @@ const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({ title, links }) => {
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#201722] text-white">
-      <div className="mx-auto max-w-4xl px-4 py-10">
+      <div className="mx-auto max-w-4xl px-4 py-10 md:px-9 xl:max-w-6xl">
         <div className="flex flex-col md:flex-row">
           <div className="flex justify-center space-x-20 md:justify-start">
             <FooterLinkGroup title="Social" links={config.footer.socialLinks} />
