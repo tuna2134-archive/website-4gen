@@ -4,7 +4,7 @@ import UserComponent from "./server";
 interface Props {
   searchParams: {
     userid: string;
-  }
+  };
 }
 
 const Page: React.FC<Props> = ({ searchParams }) => {

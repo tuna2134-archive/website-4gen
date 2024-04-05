@@ -5,9 +5,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <OldLayout>{children}</OldLayout>
-  );
+  return <OldLayout>{children}</OldLayout>;
 };
 
 export default Layout;

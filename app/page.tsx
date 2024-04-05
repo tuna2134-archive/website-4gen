@@ -11,10 +11,6 @@ interface UserStatus {
   status: "online" | "offline" | "idle" | undefined;
 }
 
-interface ContentProps {
-  children: React.ReactNode;
-}
-
 const Avatar: React.FC = () => {
   const { data, error, isLoading } = useSWR<UserStatus>(
     `${API_ENDPOINT}/status`,
