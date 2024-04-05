@@ -10,8 +10,8 @@
         "path": "/works"
       },
       {
-        "name": "Profile",
-        "path": "/home"
+        "name": "Services",
+        "path": "/services"
       }
     ]
   },
