@@ -1,12 +1,14 @@
-"use client";
-import { NextPage } from "next";
-import { useSearchParams } from "next/navigation";
 import React from "react";
 import UserComponent from "./server";
 
-const Page: NextPage = () => {
-  const searchParams = useSearchParams();
-  if (!searchParams.get("userid")) {
+interface Props {
+  searchParams: {
+    userid: string;
+  }
+}
+
+const Page: React.FC<Props> = ({ searchParams }) => {
+  if (!searchParams.userid) {
     return (
       <div className="flex h-screen w-full items-center justify-center">
         <div>
@@ -26,7 +28,7 @@ const Page: NextPage = () => {
       </div>
     );
   }
-  return <UserComponent userid={searchParams.get("userid") as string} />;
+  return <UserComponent userid={searchParams.userid as string} />;
 };
 
 export default Page;

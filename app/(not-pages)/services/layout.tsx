@@ -10,7 +10,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex h-screen">
-      <div className="h-full w-1/4 bg-violet-50 px-12 py-6">
+      <div className="hidden h-full w-full bg-violet-50 px-12 py-6 md:w-1/4">
         <Disclosure>
           <Disclosure.Button className="py-2">Discord関連</Disclosure.Button>
           <Disclosure.Panel className="px-1.5 text-gray-500">
@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Disclosure.Panel>
         </Disclosure>
       </div>
-      <div className="h-full w-3/4">{children}</div>
+      <div className="h-full w-full md:w-3/4">{children}</div>
     </div>
   );
 };

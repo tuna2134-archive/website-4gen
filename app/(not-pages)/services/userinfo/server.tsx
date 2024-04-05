@@ -38,9 +38,20 @@ const UserComponent: React.FC<UserComponentProps> = async ({ userid }) => {
   const user: User = await res.json();
   return (
     <div className="flex h-screen w-full items-center justify-center">
-      <Card title="ユーザー検索">
+      <Card title="ユーザー検索" className="w-80">
+        <div>
+          <img
+            className="rounded-full"
+            height={100}
+            width={100}
+            src={`https://cdn.discordapp.com/avatars/${userid}/${user.avatar}.png?size=1024`}
+            alt="avatar"
+          ></img>
+        </div>
         <UserField name="ユーザー名" value={user.username} />
-        <UserField name="ユーザーグローバル名" value={user.global_name} />
+        {typeof user.global_name !== null ?? (
+          <UserField name="ユーザーグローバル名" value={user.global_name} />
+        )}
         <UserField name="ユーザータグ" value={user.discriminator} />
         <UserField name="ユーザーID" value={user.id} />
         <UserField
