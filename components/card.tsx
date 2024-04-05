@@ -14,10 +14,19 @@ interface Argument {
   href?: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, children, className, iconURL, href }) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  children,
+  className,
+  iconURL,
+  href,
+}) => {
   const Component = href ? Link : "div";
   return (
-    <Component className={clsx("rounded-md bg-white p-4 shadow-md", className)} href={href as string}>
+    <Component
+      className={clsx("rounded-md bg-white p-4 shadow-md", className)}
+      href={href as string}
+    >
       <div className="flex items-center space-x-2">
         {iconURL && (
           <Image src={iconURL as string} alt={title} width={32} height={32} />
