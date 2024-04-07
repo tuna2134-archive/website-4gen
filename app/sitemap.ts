@@ -21,6 +21,14 @@ const sitemaps = [
     path: "/contact",
     priority: 0.3,
   },
+  {
+    path: "/services",
+    priority: 0.8,
+  },
+  {
+    path: "/services/userinfo",
+    priority: 0.5
+  }
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

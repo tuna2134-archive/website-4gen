@@ -1,6 +1,11 @@
 "use server";
 import Card from "@/components/card";
 import React from "react";
+import Link from "next/link";
+import dayjs from "dayjs";
+import bigIntSupport from "dayjs/plugin/bigIntSupport";
+
+dayjs.extend(bigIntSupport);
 
 interface UserComponentProps {
   userid: string;
@@ -13,6 +18,7 @@ interface User {
   bot: boolean;
   discriminator: string;
   id: string;
+  createdAt?: BigInt;
 }
 
 interface UserFieldProps {
@@ -35,10 +41,11 @@ const UserComponent: React.FC<UserComponentProps> = async ({ userid }) => {
       Authorization: `Bot ${process.env.DISCORD_TOKEN}`,
     },
   });
-  const user: User = await res.json();
+  let user: User = await res.json();
+  user.createdAt = (BigInt(user.id) >> BigInt(22)) + BigInt(1420070400000);
   return (
-    <div className="flex h-screen w-full items-center justify-center">
-      <Card title="ユーザー検索" className="w-80">
+    <div className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+      <Card title="ユーザー検索" className="min-w-80">
         <div>
           <img
             className="rounded-full"
@@ -48,17 +55,26 @@ const UserComponent: React.FC<UserComponentProps> = async ({ userid }) => {
             alt="avatar"
           ></img>
         </div>
-        <UserField name="ユーザー名" value={user.username} />
-        {typeof user.global_name !== null ?? (
-          <UserField name="ユーザーグローバル名" value={user.global_name} />
-        )}
-        <UserField name="ユーザータグ" value={user.discriminator} />
-        <UserField name="ユーザーID" value={user.id} />
-        <UserField
-          name="ボットかどうか？"
-          value={user.bot ? "はい" : "いいえ"}
-        />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <UserField name="ユーザー名" value={user.username} />
+          {typeof user.global_name !== null ?? (
+            <UserField name="ユーザーグローバル名" value={user.global_name} />
+          )}
+          <UserField name="ユーザータグ" value={user.discriminator} />
+          <UserField name="ユーザーID" value={user.id} />
+          <UserField
+            name="ボットかどうか？"
+            value={user.bot ? "はい" : "いいえ"}
+          />
+          <UserField
+            name="ユーザー登録日"
+            value={dayjs(user.createdAt).format()}
+          />
+        </div>
       </Card>
+      <Link href="/services/userinfo" className="hover:text-violet-500">
+        前に戻る
+      </Link>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import UserComponent from "./server";
 interface Props {
   searchParams: {
     userid: string;
-  }
+  };
 }
 
 const Page: React.FC<Props> = ({ searchParams }) => {
@@ -13,11 +13,12 @@ const Page: React.FC<Props> = ({ searchParams }) => {
       <div className="flex h-screen w-full items-center justify-center">
         <div>
           <h2 className="text-center text-3xl font-bold">ユーザー検索</h2>
-          <div className="mt-3 flex space-x-2">
-            <form>
+          <div className="mt-6">
+            <form className="flex items-center space-x-2">
               <input
                 name="userid"
-                className="h-8 rounded-xl border border-gray-500 p-2 outline-none"
+                className="min-h-8 rounded-md border border-gray-500 px-2 text-sm outline-none"
+                placeholder="ユーザーID"
               />
               <button className="mx-2 rounded bg-violet-500 px-3 py-1 text-white">
                 検索
