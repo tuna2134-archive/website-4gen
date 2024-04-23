@@ -2,8 +2,6 @@ name: Renovatebot auto-merge
 
 on:
   pull_request:
-  push:
-    branches: [ main ]
 
 permissions:
   contents: write
@@ -11,6 +9,7 @@ permissions:
 
 jobs:
   renovatebot:
+    if: github.actor == 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -26,7 +25,6 @@ jobs:
         pnpm install --frozen-lockfile
         pnpm dlx @cloudflare/next-on-pages
     - name: Enable auto-merge for Dependabot PRs
-      if: github.event_name != 'pull_request' && github.actor == 'renovate[bot]'
       run: gh pr merge --auto --merge "$PR_URL"
       env:
         PR_URL: ${{github.event.pull_request.html_url}}
