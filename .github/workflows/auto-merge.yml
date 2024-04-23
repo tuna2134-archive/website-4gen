@@ -2,6 +2,8 @@ name: Renovatebot auto-merge
 
 on:
   pull_request:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
@@ -23,9 +25,9 @@ jobs:
     - name: Build checking
       run: |
         pnpm install --frozen-lockfile
-        corepack enable
         pnpmx dlx @cloudflare/next-on-pages
     - name: Enable auto-merge for Dependabot PRs
+      if: github.event_name != 'pull_request'
       run: gh pr merge --auto --merge "$PR_URL"
       env:
         PR_URL: ${{github.event.pull_request.html_url}}
