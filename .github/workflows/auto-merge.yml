@@ -24,7 +24,7 @@ jobs:
     - name: Build checking
       run: |
         pnpm install --frozen-lockfile
-        pnpmx dlx @cloudflare/next-on-pages
+        pnpm dlx @cloudflare/next-on-pages
     - name: Enable auto-merge for Dependabot PRs
       if: github.event_name != 'pull_request' && github.actor == 'renovate[bot]'
       run: gh pr merge --auto --merge "$PR_URL"
