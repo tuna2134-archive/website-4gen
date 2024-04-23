@@ -99,3 +99,4 @@ const Page: NextPage = () => {
 };
 
 export default Page;
+export const runtime = 'edge';
