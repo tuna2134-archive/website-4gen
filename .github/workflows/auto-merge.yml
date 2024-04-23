@@ -24,7 +24,7 @@ jobs:
       run: |
         pnpm install --frozen-lockfile
         corepack enable
-        pnpm build
+        pnpmx dlx @cloudflare/next-on-pages
     - name: Enable auto-merge for Dependabot PRs
       run: gh pr merge --auto --merge "$PR_URL"
       env:
