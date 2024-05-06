@@ -17,7 +17,7 @@ const Page: React.FC<Props> = ({ searchParams }) => {
             <form className="flex items-center space-x-2">
               <input
                 name="userid"
-                className="min-h-8 rounded-md border border-gray-500 px-2 text-sm outline-none"
+                className="min-h-8 rounded-md border border-slate-400 px-2 text-sm outline-none"
                 placeholder="ユーザーID"
               />
               <button className="mx-2 rounded bg-violet-500 px-3 py-1 text-white">
