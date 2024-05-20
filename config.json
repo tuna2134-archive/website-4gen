@@ -121,6 +121,11 @@
         "title": "Automod CAP",
         "description": "Automodをコピペしてくれるbot",
         "link": "https://discord.com/oauth2/authorize?client_id=1002877676526239794&permissions=68640&scope=bot"
+      },
+      {
+        "title": "@tuna2134/ui",
+        "description": "独自のUIライブラリ",
+        "link": "https://github.com/tuna2134/ui"
       }
     ],
     "contacts": [
