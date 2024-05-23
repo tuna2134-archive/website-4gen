@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP, Poppins } from "next/font/google";
+import { Noto_Sans_JP, Poppins, Courgette } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const popins = Poppins({ subsets: ["latin"], weight: "400" });
 const notoSansJP = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
+const courgette = Courgette({
+    weight: "400",
+    subsets: ["latin"],
+    variable: "--font-courgette",
+});
 
 export const metadata: Metadata = {
     title: {
@@ -21,7 +26,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <body className={`${popins.className} ${notoSansJP.className}`}>
+            <body
+                className={`${popins.className} ${notoSansJP.className} ${courgette.variable}`}
+            >
                 {children}
                 <GoogleAnalytics gaId={process.env.GA_ID as string} />
             </body>

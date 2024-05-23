@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const Page: NextPage = () => {
     return (
         <div className="mx-auto max-w-5xl">
-            <h2 className="text-center text-2xl font-bold">
+            <h2 className="text-center font-courgette text-4xl font-bold">
                 tuna2134`s profile
             </h2>
             <Card className="mt-4" title="事故紹介">

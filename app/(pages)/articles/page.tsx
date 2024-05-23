@@ -37,8 +37,10 @@ const Page = async ({
     const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
     return (
         <>
-            <h2 className="text-3xl font-bold">Articles</h2>
-            <div className="my-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <h2 className="text-center font-courgette text-4xl font-bold">
+                Articles
+            </h2>
+            <div className="my-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                 {items[page - 1].map((item, index) => (
                     <div key={index} className="mt-4">
                         <Link href={item.link as string}>

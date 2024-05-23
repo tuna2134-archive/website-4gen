@@ -24,6 +24,9 @@ const config: Config = {
                     },
                 },
             },
+            fontFamily: {
+                courgette: ["var(--font-courgette)"],
+            },
         },
     },
     plugins: [],

@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 const Page: NextPage = () => {
     return (
         <>
-            <h2 className="text-2xl font-bold">Works</h2>
+            <h2 className="text-center font-courgette text-4xl font-bold">
+                Works
+            </h2>
             <div className="mt-4 grid grid-cols-1 gap-2 md:grid-cols-2">
                 {config.pages.works.map((work, index) => (
                     <Card key={index} title={work.title}>
