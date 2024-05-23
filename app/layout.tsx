@@ -7,25 +7,25 @@ const popins = Poppins({ subsets: ["latin"], weight: "400" });
 const notoSansJP = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | tuna2134",
-    default: "Home",
-  },
-  description: "tuna2134 is an engineer and student",
+    title: {
+        template: "%s | tuna2134",
+        default: "Home",
+    },
+    description: "tuna2134 is an engineer and student",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="ja">
-      <body className={`${popins.className} ${notoSansJP.className}`}>
-        {children}
-        <GoogleAnalytics gaId={process.env.GA_ID as string} />
-      </body>
-    </html>
-  );
+    return (
+        <html lang="ja">
+            <body className={`${popins.className} ${notoSansJP.className}`}>
+                {children}
+                <GoogleAnalytics gaId={process.env.GA_ID as string} />
+            </body>
+        </html>
+    );
 }
-export const runtime = 'edge';
+export const runtime = "edge";
